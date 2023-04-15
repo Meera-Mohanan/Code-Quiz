@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../Code-Quiz/Assets/style.css" />
+</head>
+
+<body>
+    <header>
+        <button class="high-scores" id="highscoresBtn">View high scores</button>
+        <div class="timer">Time:60</div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="main-title">Coding Challenge Quiz</h1>
+            <p class="content">Try to answer the code related questions within the time limit. Keep in mind that
+                incorrect answers will penalize your score/time by ten seconds!</p>
+            <button class="start-game">
+                Start Game
+            </button>
+        </div>
+
+        <section id="questionContainer" class="hidden">
+        </section>
+
+        <section id = "gameOverContainer" class="hidden">
+            <h1>Game Over</h1>
+            <p class = "finalScore"></p>
+            <input class="highScore" type = "text">
+            <button class = "submitButton">Submit</button>
+        </section>
+
+        <section id = "scoreList" class = "hidden">
+            <h1>High Scores</h1>
+            <div class = "scoresList"></div>
+            <button class = "backButton">Go back</button>
+            <button class = "clearButton">Clear high scores</button>
+        </section>
+    </main>
+    <footer>
+        <p></p>
+    </footer>
+    <script src="../Code-Quiz/Assets/script.js"></script>
+</body>
+
+</html>

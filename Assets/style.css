@@ -1,0 +1,62 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
+
+.container{
+    margin: 25%;
+    margin-top:10%;
+}
+
+button {
+    background-color: rgb(15, 14, 15);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.content {
+    text-align: center;
+}
+
+.start-game {
+    margin: 5px;
+    position: absolute;
+
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.main-title {
+    text-align: center;
+}
+.submitButton {
+    display: flex;
+    flex-direction: column;
+}
+
+#questionContainer {
+    margin: 25%;
+    margin-top: 10%
+}
+#gameOverContainer {
+    margin: 25%;
+    margin-top: 10%
+}
+#scoreList {
+    margin: 25%;
+    margin-top: 10%
+}
+.backButton {
+    margin: 5px;
+    margin-left: 0;
+}
+.clearButton {
+    margin: 5px;
+}
+Footer
