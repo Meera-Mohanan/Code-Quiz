@@ -14,10 +14,63 @@ header{
 }
 
 button {
-    background-color: rgb(15, 14, 15);
+    background-color: rgb(33, 28, 33);
     border-radius: 5px;
     color: white;
     padding: 5px;
+}
+.answers{
+    position: relative;
+    display: flex;
+    min-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    justify-content: left;
+}
+
+.answer{
+    min-width: 100%;
+    border: black 2px solid;
+    border-radius: 8px;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    text-align: left;
+    color: white;
+
+}
+
+.rules{
+    text-align: center;
+}
+
+.inline{
+    width: 200px;
+    margin: 0 auto;
+    display: inline;
+}
+ 
+.answer:hover, .styled-button:hover{
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+.answer::before{
+    margin-left: 5px;
+}
+
+.answer:nth-child(1)::before{
+    content: "1. ";
+}
+
+.answer:nth-child(2)::before{
+    content: "2. ";
+}
+.answer:nth-child(3)::before{
+    content: "3. ";
+}
+.answer:nth-child(4)::before{
+    content: "4. ";
 }
 
 .content {
@@ -59,4 +112,3 @@ button {
 .clearButton {
     margin: 5px;
 }
-Footer

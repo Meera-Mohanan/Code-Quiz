@@ -17,34 +17,29 @@ let usersScores = JSON.parse(localStorage.getItem('score')) || []
 const myQuestions= [
     {
         question:"Where is the correct place to insert a JavaScript?",
-        Answers : ['The<head> section','Both the <head> section and the <body> section are correct','The <bosy> section'],
+        answers : ['The<head> section','Both the <head> section and the <body> section are correct','The <bosy> section'],
         correctAnswer : 'Both the <head> section and the <body> section are correct  '
     },
     {
-        question: "How do you write "Hello World" in an alert box?",
-        Answers: ['msg("Hello World")','msgBox("Hello World")','alertBox("Hello World")','alert("Hello World")'],
-        correctAnswer : 'alert("Hello World");'
-    },
-    {
         question: "How do you create a function in JavaScript?",
-        Answers: ['funtion:myFunction()','function myFunction()','function = myFunction()'],
+        answers: ['funtion:myFunction()','function myFunction()','function = myFunction()'],
         correctAnswer : 'function myFunction()'
     },
     {
         question: "How to write an IF statement in JavaScript?",
-        Answers: ['if i==5 then','if i=5','if (i==5)','if i = 5 then'],
+        answers: ['if i==5 then','if i=5','if (i==5)','if i = 5 then'],
         correctAnswer : 'if (i == 5)'
     },
     {
         question: "How does a WHILE loop start?",
-        Answers: ['while i = 1 to 10','while (i<=10;i++)','while(i<=10)'],
+        answers: ['while i = 1 to 10','while (i<=10;i++)','while(i<=10)'],
         correctAnswer : 'while (i <= 10)'
     }
 ]
 
 var timerInterval;
 startButtonEl.addEventListener('click', function () {
-    secondsLeft = 60;
+    secondsLeft =60;
     timerInterval = setInterval(function () {
         secondsLeft--;
         timerEl.textContent = ("Time " + secondsLeft);
