@@ -9,7 +9,7 @@ let feedbackEl = document.querySelector("#feedback");
 
 // quiz state variables
 let currentQuestionIndex = 0;
-let time = questions.length * 15;
+let time = questions.length * 10;
 let timerId;
 
 function startQuiz() {
@@ -124,7 +124,7 @@ function clockTick() {
 function saveHighscore() {
   // get value of input box
   var initials = initialsEl.value.trim();
-
+console.log(initials);
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
     var highscores =
