@@ -9,7 +9,7 @@ let feedbackEl = document.querySelector("#feedback");
 
 // quiz state variables
 let currentQuestionIndex = 0;
-let time = questions.length * 10;
+let time = questions.length * 15;
 let timerId;
 
 function startQuiz() {
@@ -41,7 +41,7 @@ function getQuestion() {
   choicesEl.innerHTML = "";
 
   // loop over choices
-  currentQuestion.choices.forEach(function(choice, i) {
+  currentQuestion.choices.forEach(function (choice, i) {
     // create new button for each choice
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
@@ -79,7 +79,7 @@ function questionClick() {
 
   // flash right/wrong feedback
   feedbackEl.setAttribute("class", "feedback");
-  setTimeout(function() {
+  setTimeout(function () {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
 
@@ -124,7 +124,7 @@ function clockTick() {
 function saveHighscore() {
   // get value of input box
   var initials = initialsEl.value.trim();
-console.log(initials);
+  console.log(initials);
   if (initials !== "") {
     // get saved scores from localstorage, or if not any, set to empty array
     var highscores =
