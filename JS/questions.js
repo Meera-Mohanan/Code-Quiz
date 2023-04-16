@@ -5,6 +5,11 @@ const questions= [
         answer : 'Both the <head> section and the <body> section are correct'
     },
     {
+        title:"How do you round the number 7.25, to the nearest integer?",
+        choices : ['Math.rnd(7.25)','rnd(7.25)','round(7.25)','Math.round(7.25)'],
+        answer : 'Math.round(7.25)'
+    },
+    {
         title: "How do you create a function in JavaScript?",
         choices: ['funtion:myFunction()','function myFunction()','function = myFunction()'],
         answer : 'function myFunction()'
