@@ -1,8 +1,8 @@
-var questions= [
+const questions= [
     {
         title:"Where is the correct place to insert a JavaScript?",
         choices : ['The<head> section','Both the <head> section and the <body> section are correct','The <bosy> section'],
-        answer : 'Both the <head> section and the <body> section are correct  '
+        answer : 'Both the <head> section and the <body> section are correct'
     },
     {
         title: "How do you create a function in JavaScript?",

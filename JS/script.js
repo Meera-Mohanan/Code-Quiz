@@ -1,16 +1,16 @@
 // DOM elements
-var questionsEl = document.querySelector("#questions");
-var timerEl = document.querySelector("#time");
-var choicesEl = document.querySelector("#choices");
-var submitBtn = document.querySelector("#submit");
-var startBtn = document.querySelector("#start");
-var initialsEl = document.querySelector("#initials");
-var feedbackEl = document.querySelector("#feedback");
+let questionsEl = document.querySelector("#questions");
+let timerEl = document.querySelector("#time");
+let choicesEl = document.querySelector("#choices");
+let submitBtn = document.querySelector("#submit");
+let startBtn = document.querySelector("#start");
+let initialsEl = document.querySelector("#initials");
+let feedbackEl = document.querySelector("#feedback");
 
 // quiz state variables
-var currentQuestionIndex = 0;
-var time = questions.length * 10;
-var timerId;
+let currentQuestionIndex = 0;
+let time = questions.length * 15;
+let timerId;
 
 function startQuiz() {
   // hide start screen
@@ -41,7 +41,7 @@ function getQuestion() {
   choicesEl.innerHTML = "";
 
   // loop over choices
-  currentQuestion.choices.forEach(function (choice, i) {
+  currentQuestion.choices.forEach(function(choice, i) {
     // create new button for each choice
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
@@ -61,7 +61,7 @@ function questionClick() {
   // check if user guessed wrong
   if (this.value !== questions[currentQuestionIndex].answer) {
     // penalize time
-    time -= 10;
+    time -= 15;
 
     if (time < 0) {
       time = 0;
@@ -70,16 +70,16 @@ function questionClick() {
     timerEl.textContent = time;
     feedbackEl.textContent = "Wrong!";
     feedbackEl.style.color = "red";
-    feedbackEl.style.fontSize = "100%";
+    feedbackEl.style.fontSize = "400%";
   } else {
     feedbackEl.textContent = "Correct!";
     feedbackEl.style.color = "green";
-    feedbackEl.style.fontSize = "100%";
+    feedbackEl.style.fontSize = "400%";
   }
 
   // flash right/wrong feedback
   feedbackEl.setAttribute("class", "feedback");
-  setTimeout(function () {
+  setTimeout(function() {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
 
