@@ -1,50 +1,48 @@
+<!--Collaborated with Janvier Mbilizi-->
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Code Quiz</title>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../Code-Quiz/Assets/style.css" />
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
 
-<body>
-    <header>
-        <button class="high-scores" id="highscoresBtn">View high scores</button>
-        <div class="timer">Time:75</div>
-    </header>
+    <link rel="stylesheet" href="Assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,600&display=swap" rel="stylesheet">
+  </head>
 
-    <main>
-        <div class="container">
-            <h1 class="main-title">Coding Challenge Quiz</h1>
-            <p class="content">Try to answer the code related questions within the time limit. Keep in mind that
-                incorrect answers will penalize your score/time by ten seconds!</p>
-            <button class="start-game">
-                Start Game
-            </button>
-        </div>
+  <body>
+    <div class="scores"><a href="score.html">View Highscores</a></div>
 
-        <section id="questionContainer" class="hidden">
-        </section>
+    <div class="timer">Time: <span id="time">0</span></div>
 
-        <section id = "gameOverContainer" class="hidden">
-            <h1>Game Over</h1>
-            <p class = "finalScore"></p>
-            <input class="highScore" type = "text">
-            <button class = "submitButton">Submit</button>
-        </section>
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Let's see what you know! Here are some code-related questions. Answer them all as quickly as you can and try to get the HIGH SCORE, but note that incorrect answers will result in a 10 second score/time penalty. Don't worry, you can try as many times as you want!
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
 
-        <section id = "scoreList" class = "hidden">
-            <h1>High Scores</h1>
-            <div class = "scoresList"></div>
-            <button class = "backButton">Go back</button>
-            <button class = "clearButton">Clear high scores</button>
-        </section>
-    </main>
-    <footer>
-        <p></p>
-    </footer>
-    <script src="../Code-Quiz/Assets/script.js"></script>
-</body>
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
 
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="JS/questions.js"></script>
+    <script src="JS/script.js"></script>
+  </body>
 </html>

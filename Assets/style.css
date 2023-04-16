@@ -1,114 +1,87 @@
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.hidden {
+body {
+    font-family:'Times New Roman', Times, serif, serif;
+  }
+  .wrapper {
+    margin: 100px auto 0 auto;
+    max-width: 600px;
+  }
+  
+  .hide {
     display: none;
-}
-
-.container{
-    margin: 25%;
-    margin-top:10%;
-}
-
-button {
-    background-color: rgb(33, 28, 33);
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-}
-.answers{
-    position: relative;
-    display: flex;
-    min-width: 300px;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    justify-content: left;
-}
-
-.answer{
-    min-width: 100%;
-    border: black 2px solid;
-    border-radius: 8px;
-    background-color: aliceblue;
-    margin-bottom: 5px;
-    text-align: left;
-    color: white;
-
-}
-
-.rules{
+  }
+  
+  .start {
     text-align: center;
-}
-
-.inline{
-    width: 200px;
-    margin: 0 auto;
-    display: inline;
-}
- 
-.answer:hover, .styled-button:hover{
-    filter: brightness(150%);
-    cursor: pointer;
-}
-
-.answer::before{
-    margin-left: 5px;
-}
-
-.answer:nth-child(1)::before{
-    content: "1. ";
-}
-
-.answer:nth-child(2)::before{
-    content: "2. ";
-}
-.answer:nth-child(3)::before{
-    content: "3. ";
-}
-.answer:nth-child(4)::before{
-    content: "4. ";
-}
-
-.content {
-    text-align: center;
-}
-
-.start-game {
-    margin: 5px;
+  }
+  
+  .scores {
     position: absolute;
-
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.main-title {
-    text-align: center;
-}
-.submitButton {
-    display: flex;
-    flex-direction: column;
-}
-
-#questionContainer {
-    margin: 25%;
-    margin-top: 10%
-}
-#gameOverContainer {
-    margin: 25%;
-    margin-top: 10%
-}
-#scoreList {
-    margin: 25%;
-    margin-top: 10%
-}
-.backButton {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .feedback {
+    font-style:normal;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: gray;
+    border-top: 2px solid rgb(201, 193, 193);
+  }
+  
+  .timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s;
+  }
+  
+  a:hover {
+    color: #70707a;
+  }
+  
+  button {
+    display: inline-block;
     margin: 5px;
-    margin-left: 0;
-}
-.clearButton {
-    margin: 5px;
-}
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif, serif;
+    font-size: 100%;
+    background-color: rgb(36, 60, 60);
+    border-radius: 5px;
+    padding: 2px 10px;
+    color: white;
+    border: 0;
+    transition: background-color 0.1s;
+  }
+  
+  button:hover {
+    background-color: silver;
+  }
+  
+  .choices button {
+    display: block;
+  }
+  
+  input[type="text"] {
+    font-size: 90%;
+  }
+  
+  ol {
+    padding-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  li {
+    padding: 5px;
+    list-style: decimal inside none;
+  }
+  
+  li:nth-child(odd) {
+    background-color: #dfdae7;
+  }
