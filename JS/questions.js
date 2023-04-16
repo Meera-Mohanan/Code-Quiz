@@ -12,11 +12,11 @@ const questions= [
     {
         title: "How to write an IF statement in JavaScript?",
         choices: ['if i==5 then','if i=5','if (i==5)','if i = 5 then'],
-        answer : 'if (i == 5)'
+        answer : 'if (i==5)'
     },
     {
         title: "How does a WHILE loop start?",
-        choices: ['while i = 1 to 10','while (i<=10;i++)','while(i<=10)'],
-        answer : 'while (i <= 10)'
+        choices: ['while i = 1 to 10','while (i<=10;i++)','while (i <=10)'],
+        answer : 'while (i <=10)'
     }
 ]
